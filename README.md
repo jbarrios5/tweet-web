@@ -4,19 +4,19 @@
 ![Estructura login](/docs/login.PNG)
 
 # Pantalla de registro
-![Estructura register](docs/register.png)
+![Estructura register](/docs/register.PNG)
 
 # Pantalla inicial 
-![Estructura register](docs/home.png)
+![Estructura register](/docs/home.PNG)
 
 # Perfil
-![Estructura register](docs/profile1.png)
+![Estructura register](/docs/profile1.PNG)
 
 # Perfil 2
-![Estructura register](docs/profile2.png)
+![Estructura register](/docs/profile2.PNG)
 
 # Busqueda
-![Estructura register](docs/search.png)
+![Estructura register](/docs/search.PNG)
 
 # Para desplegar localmente
 
