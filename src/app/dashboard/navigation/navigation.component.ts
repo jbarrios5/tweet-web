@@ -8,17 +8,15 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent implements OnInit{
 
-  public sidebarItems = [
-    { label:'Listar ', icon: 'list',url:'/transaction/list' }
-  
-  ]
-
-  public sidebarItemsReport = [
-    { label:'Resumen', icon:'monitoring',url:'/dashboard/resume' }
-  ]
+ 
+  public profile = { label:'Mi perfil', icon: 'person',url:'/dashboard/resume' }
+  public tweet = { label:'Buscar usuarios', icon: 'group',url:'/tweet/search' }
   public home = { label:'Inicio', icon: 'home',url:'/dashboard/home' }
-  
-  constructor(private router:Router){}
+
+  public userName:string = ''
+  constructor(private router:Router){
+    this.userName = localStorage.getItem('userName')||'tweet'
+  }
   ngOnInit(): void {
   }
 

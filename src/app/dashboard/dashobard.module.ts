@@ -7,10 +7,11 @@ import { DashboardRouting } from "./dashboard.routing.module";
 import { HomeComponent } from "./home/home.component";
 import { HomeSummaryComponent } from "./home/pages/home-summary/home-summary.component";
 import { LayoutHomeComponent } from "./home/pages/layout/layout.component";
+import { TweetComponent } from "./home/pages/tweet/tweet.component";
 import { NavigationComponent } from "./navigation/navigation.component";
 
 @NgModule({
     imports: [DashboardRouting,MaterialModule,CommonModule,ReactiveFormsModule,RouterModule],
-    declarations:[NavigationComponent,HomeComponent,LayoutHomeComponent,HomeSummaryComponent]
+    declarations:[NavigationComponent,HomeComponent,LayoutHomeComponent,HomeSummaryComponent,TweetComponent]
   })
 export class DashboardModule{}

@@ -5,7 +5,7 @@ import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { environment } from 'src/environment/environment';
 import { AuthPostReqData } from '../interfaces/auth-post-req-data.interface';
 import { AuthPostResData } from '../interfaces/auth-post-res-data.interface';
-import { UserPostReqData, UserPostResData } from '../interfaces/user-get-res.interface';
+import { UserPostReqData, UserPostResData } from '../interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +42,8 @@ export class AuthService {
     localStorage.setItem('accessToken', jwt)
     const decodedToken: any = jwtDecode(jwt);
     localStorage.setItem('accessTokenExpires',decodedToken.exp)
-    localStorage.setItem('user',JSON.stringify(decodedToken.tweetUser))
+    localStorage.setItem('userId',decodedToken.tweetUser.id)
+    localStorage.setItem('userName',decodedToken.tweetUser.userName)
     return true;
   }
   private buildHeader(): HttpHeaders {

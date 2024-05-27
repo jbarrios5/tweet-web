@@ -1,7 +1,7 @@
 <div class="row mt-3 mx-5 mb-3 p-2">
-  <h1 class="mat-h1">{{'¡Hola '+ 'Juan'+'!'}}</h1>
+  <h1 class="mat-h1">{{'¡Hola '+ this.userName+'!'}}</h1>
 
-  <div *ngIf="!this.finishedGetReport && !this.isFinishedGetChurch; else result;" class="container">
+  <div *ngIf="!this.finishedGetUsers && !finishedGetFollowersAndFollowed; else result;" class="container">
     <div class="row">
       <div class="col-12 text-ceter">
         <mat-spinner></mat-spinner>
@@ -11,5 +11,6 @@
   
   <ng-template   #result>
     <app-home-summary/> 
+    <app-tweet></app-tweet>
    </ng-template> 
 </div>

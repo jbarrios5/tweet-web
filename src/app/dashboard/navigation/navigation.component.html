@@ -8,20 +8,17 @@
       </button>
 
     </mat-toolbar>
-    <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title class="h6 text-title text-center">
-          Reportes
-        </mat-panel-title>
-      </mat-expansion-panel-header>
+
       <mat-nav-list>
-        <mat-list-item *ngFor="let item of sidebarItemsReport" [routerLink]="item.url" (click)="sidenav.toggle()">
-          <mat-icon>{{item.icon }} </mat-icon>{{ item.label}}
+        <mat-list-item [routerLink]="profile.url" (click)="sidenav.toggle()">
+          <mat-icon>{{profile.icon}}</mat-icon>{{profile.label}}
         </mat-list-item>
       </mat-nav-list>
-    </mat-expansion-panel>
-  </mat-accordion>
+      <mat-nav-list>
+        <mat-list-item [routerLink]="tweet.url" (click)="sidenav.toggle()">
+          <mat-icon>{{tweet.icon}}</mat-icon>{{tweet.label}}
+        </mat-list-item>
+      </mat-nav-list>
     <mat-nav-list>
       <mat-list-item  [routerLink]="home.url" (click)="sidenav.toggle()">
         <mat-icon>{{home.icon }} </mat-icon>{{ home.label}}
@@ -41,7 +38,7 @@
       <mat-icon>menu</mat-icon>
 
     </button>
-    <span>tweet</span>
+    <span>{{this.userName}}</span>
     <span class="example-spacer"></span>
     <button mat-button (click)="logout()">
       <mat-icon>logout</mat-icon> Salir

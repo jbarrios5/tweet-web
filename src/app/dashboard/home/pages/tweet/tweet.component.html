@@ -1,0 +1,54 @@
+<div class="row bg-white shadow p-3 mb-5">
+  <h3>Publicar tweet</h3>
+  <div class="col-6">
+    <form [formGroup]="tweetForm" class="w-100">
+      <mat-form-field class="w-100">
+        <mat-label>Agrega tus tweets</mat-label>
+        <input matInput formControlName="tweet">
+      </mat-form-field>
+        <button   color="primary" mat-raised-button (click)="saveTweet()" >publicar</button>
+    </form>
+  </div>
+</div>
+<div class="row bg-white shadow p-3 mb-5">
+<h1>Tweets publicados</h1>
+  <div class="row">
+    <mat-card *ngFor="let tweet of tweets" class="col-4 follower-card">
+        <mat-card-header>
+        <mat-card-title>{{tweet.content}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        </mat-card-content>
+    </mat-card>     
+</div>
+</div>
+<div class="row bg-white shadow p-3 mb-5">
+  <div class="col-4">
+    <h2 class="text-center">Lista de <strong>Seguidores</strong></h2>
+    <mat-card *ngFor="let follower of followersDTO" class="follower-card">
+      <mat-card-header>
+        <mat-card-title>{{ follower.fullName }}</mat-card-title>
+        <mat-card-subtitle><mat-icon>person</mat-icon>{{ follower.userName }}</mat-card-subtitle>
+        <mat-card-subtitle><mat-icon>mail</mat-icon> {{ follower.email }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <button (click)="onFollow(follower.id)" *ngIf="!follower.isFollowed" color="primary" mat-raised-button >Seguir</button>
+        <button  color="warn" mat-raised-button class="mx-1" (click)="onProfile(follower.userName)">ver perfil</button>
+      </mat-card-content>
+    </mat-card>     
+  </div>
+  <div class="col-2"></div>
+  <div class="col-4">
+    <h2 class="text-center">Lista de <strong>Seguidos</strong> </h2>
+    <mat-card *ngFor="let followed of followedDTO" class="follower-card">
+      <mat-card-header>
+        <mat-card-title>{{ followed.fullName }}</mat-card-title>
+        <mat-card-subtitle><mat-icon>person</mat-icon>{{ followed.userName }}</mat-card-subtitle>
+        <mat-card-subtitle><mat-icon>mail</mat-icon> {{ followed.email }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <button  color="warn" mat-raised-button class="mx-1" (click)="onProfile(followed.userName)">ver perfil</button>
+      </mat-card-content>
+    </mat-card>     
+  </div>
+</div>

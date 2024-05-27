@@ -1,0 +1,22 @@
+<div class="row mt-3 mx-5 mb-3 p-2">
+    <h1 >Lista de <strong>Usuarios</strong></h1>
+    
+    <div class="col-6 mb-3">
+        <input type="text" class="form-control" #searchInput placeholder="Buscar por nombre de usuario"  >
+        <button (click)="filterUsers(searchInput.value)" color="primary" mat-raised-button class="mx-1" >buscar</button>
+      </div> 
+    <div class="row">
+        <mat-card *ngFor="let user of users" class="col-4 follower-card">
+            <mat-card-header>
+            <mat-card-title>{{user.fullName}}</mat-card-title>
+            <mat-card-subtitle><mat-icon>person</mat-icon>{{user.userName}}</mat-card-subtitle>
+            <mat-card-subtitle><mat-icon>mail</mat-icon> {{user.email}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <button (click)="goToProfile(user.userName)" color="primary" mat-raised-button class="mx-1"  >ir al perfil</button>
+            </mat-card-content>
+        </mat-card>     
+    </div>   
+    
+        
+  </div>

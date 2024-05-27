@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: ()=> import('./dashboard/dashobard.module').then(m => m.DashboardModule),
   },
   {
+    path:'tweet',
+    loadChildren: ()=> import('./tweet/tweet.module').then(m => m.TweetModule),
+  },
+  {
     path: '**',
     redirectTo: 'auth'
   }

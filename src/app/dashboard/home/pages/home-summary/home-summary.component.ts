@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserGetRes } from 'src/app/auth/interfaces/user.interface';
 import { DashboardService } from 'src/app/dashboard/service/dashboard.service';
 
 @Component({
@@ -7,15 +8,16 @@ import { DashboardService } from 'src/app/dashboard/service/dashboard.service';
   styleUrls: ['./home-summary.component.css']
 })
 export class HomeSummaryComponent {
-  totalDebitMonth:number  = 0;
-  totalCreditMonth:number = 0;
-  currentBalance:number   = 0;
+  totalFollowed:number  = 0;
+  totalFollowers:number = 0;
+  totalTweet:number   = 0;
   
   
   constructor(private dashboardService:DashboardService){
-    console.log('En el constructor');
-    this.totalCreditMonth = 1000;
-    this.totalDebitMonth = 20000;
+    console.log(this.dashboardService.users);
+    const user:UserGetRes[] = this.dashboardService.users?.data.filter( res => res.userName === localStorage.getItem('userName')) || []
+    this.totalFollowed = user[0].followed;
+    this.totalFollowers = user[0].followers;
 
   }
   

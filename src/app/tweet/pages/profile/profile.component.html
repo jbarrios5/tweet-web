@@ -1,0 +1,36 @@
+<div class="row mt-3 mx-5 mb-3 p-2">
+    <h1 >Usuario <strong>{{userName}}</strong></h1>
+    <div class="col-12 mb-3">
+        <div class="col-3">
+            <button (click)="onFollow()" *ngIf="!userIsFollow" color="primary" mat-raised-button >Seguir</button>    
+            <button *ngIf="userIsFollow" color="accent" mat-raised-button >Seguido</button>    
+
+        </div>
+
+    </div>
+    <div class="row bg-white shadow p-3 mb-5">
+        <div class="col-lg-6 col-md-12 col-sm-12 bg-primary mt-2 text-white rounded ">
+          <h2>Seguidores</h2>
+          <p class="text-center size"> <strong>{{ this.totalFollowers}}</strong></p>
+          
+              
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 bg-success mt-2 text-white rounded ">
+              <h2 class="">Seguidos </h2>
+              <p class="text-center size"><strong>{{this.totalFollowed }}</strong> </p>
+        </div>
+       
+    
+
+  </div>
+  <h1>Tweets publicados</h1>
+  <div class="row">
+    <mat-card *ngFor="let tweet of tweets" class="col-4 follower-card">
+        <mat-card-header>
+        <mat-card-title>{{tweet.content}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        </mat-card-content>
+    </mat-card>     
+</div>
+</div>
