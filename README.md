@@ -1,24 +1,24 @@
 # TweetWeb
 
-#Pantalla de accesso
-![Estructura login](docs/login.png)
+# Pantalla de accesso
+![Estructura login](/docs/login.PNG)
 
-#Pantalla de registro
-![Estructura register](docs/register.png)
+# Pantalla de registro
+![Estructura register](/docs/register.PNG)
 
-#Pantalla inicial 
-![Estructura register](docs/home.png)
+# Pantalla inicial 
+![Estructura register](/docs/home.PNG)
 
-#Perfil
-![Estructura register](docs/profile1.png)
+# Perfil
+![Estructura register](/docs/profile1.PNG)
 
-#Perfil 2
-![Estructura register](docs/profile2.png)
+# Perfil 2
+![Estructura register](/docs/profile2.PNG)
 
-#Busqueda
-![Estructura register](docs/search.png)
+# Busqueda
+![Estructura register](/docs/search1.PNG)
 
-#Para desplegar localmente
+# Para desplegar localmente
 
 1- Clonar el proyecto
 
