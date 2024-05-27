@@ -1,27 +1,33 @@
 # TweetWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.13.
+#Pantalla de accesso
+![Estructura login](docs/login.png)
 
-## Development server
+#Pantalla de registro
+![Estructura register](docs/register.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#Pantalla inicial 
+![Estructura register](docs/home.png)
 
-## Code scaffolding
+#Perfil
+![Estructura register](docs/profile1.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#Perfil 2
+![Estructura register](docs/profile2.png)
 
-## Build
+#Busqueda
+![Estructura register](docs/search.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#Para desplegar localmente
 
-## Running unit tests
+1- Clonar el proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2- Deben instalar node mayor o igual a la version v18.16.0 
 
-## Running end-to-end tests
+3- ejecutar el comando npm 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4- ejecutar el comando ng serve
 
-## Further help
+5- Tener en cuenta que el mcs.tweet debe estar deplegado
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
