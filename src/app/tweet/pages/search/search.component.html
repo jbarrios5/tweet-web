@@ -2,8 +2,12 @@
     <h1 >Lista de <strong>Usuarios</strong></h1>
     
     <div class="col-6 mb-3">
-        <input type="text" class="form-control" #searchInput placeholder="Buscar por nombre de usuario"  >
-        <button (click)="filterUsers(searchInput.value)" color="primary" mat-raised-button class="mx-1" >buscar</button>
+        <form [formGroup]="searchForm">
+            <input type="text" class="form-control" formControlName="userNameForm" placeholder="Buscar por nombre de usuario"  >
+            
+        </form>
+        <button (click)="filterUsers()" color="primary" mat-raised-button class="mx-1" >buscar</button>
+        <button (click)="clearSearch()" color="warn" mat-raised-button class="mx-1" >Limpiar</button>
       </div> 
     <div class="row">
         <mat-card *ngFor="let user of users" class="col-4 follower-card">

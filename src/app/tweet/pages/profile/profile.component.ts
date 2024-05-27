@@ -31,9 +31,15 @@ export class ProfileComponent implements OnInit  {
 
     this.getFollowers()
     this.getTweets()
+    this.getFollowAndFollower()
     this.userIsFollow = this.dashboardService.followedAndFollowers?.data.followed.find( us => us.userName === this.userName) ? true : false
   }
-
+  getFollowAndFollower():void{
+    this.dashboardService.getFollowAndFollower()
+    .subscribe( res => {
+      this.userIsFollow = res.data.followed.find( us => us.userName === this.userName) ? true : false
+    })
+  }
   getTweets():void{
     this.tweetService.getTwees(this.userName)
     .subscribe(res => {
@@ -42,6 +48,7 @@ export class ProfileComponent implements OnInit  {
     )
   }
   getFollowers():void{
+    if(this.dashboardService.users){
     this.dashboardService.users?.data.forEach( res =>{
       console.log(res);
       
@@ -49,7 +56,19 @@ export class ProfileComponent implements OnInit  {
         this.totalFollowers = res.followers
         this.totalFollowed = res.followed
       }
-    })
+    })}
+    else{
+      this.dashboardService.getUser()
+      .subscribe( res =>{
+        res.data.forEach( res =>{
+          console.log(res);
+          
+          if(res.userName === this.userName){
+            this.totalFollowers = res.followers
+            this.totalFollowed = res.followed
+          }})
+      })
+    }
   }
 
   onFollow():void{
