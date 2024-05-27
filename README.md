@@ -16,7 +16,7 @@
 ![Estructura register](/docs/profile2.PNG)
 
 # Busqueda
-![Estructura register](/docs/search.PNG)
+![Estructura register](/docs/search1.PNG)
 
 # Para desplegar localmente
 
