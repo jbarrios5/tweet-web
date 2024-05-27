@@ -19,15 +19,18 @@
 ![Estructura register](/docs/search1.PNG)
 
 # Para desplegar localmente
+1- [Angular CLI](https://angular.io/cli) (versión 16 o superior) (tener instalado)
 
-1- Clonar el proyecto
+2- [Node.js](https://nodejs.org/) (versión 14 o superior) (tener instalado)
 
-2- Deben instalar node mayor o igual a la version v18.16.0 
+3- Clonar el proyecto
 
-3- ejecutar el comando npm 
 
-4- ejecutar el comando ng serve
+3- Entrar en la carprta cd tweet-web 
 
-5- Tener en cuenta que el mcs.tweet debe estar deplegado
+4- ejecutar el comando npm install para instalar todas la dependencias
+
+5-  ejecutar el comando ng serve para desplegar localmente 
+6- Tener en cuenta que el mcs.tweet debe estar deplegado en el puerto 8080
 
 
