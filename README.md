@@ -1,7 +1,7 @@
 # TweetWeb
 
 # Pantalla de accesso
-![Estructura login](/docs/login.png)
+![Estructura login](/docs/login.PNG)
 
 # Pantalla de registro
 ![Estructura register](docs/register.png)
